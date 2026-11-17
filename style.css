@@ -1,0 +1,11 @@
+:root{font-family:system-ui,-apple-system,Segoe UI,sans-serif;color:#11243b;background:#edf3fa}
+*{box-sizing:border-box}body{margin:0}.app{max-width:850px;margin:36px auto;padding:0 18px}
+header{background:#102843;color:white;border-radius:18px;padding:26px 30px;margin-bottom:18px}
+header h1{margin:6px 0}.eyebrow{color:#6ee7ee;letter-spacing:.07em;text-transform:uppercase;font-size:12px}
+.panel{background:white;border:1px solid #d7e4f2;border-radius:15px;padding:20px 24px;margin:16px 0;box-shadow:0 5px 16px #15304d0b}
+h2{margin-top:0;font-size:20px}button{cursor:pointer;background:#176db2;color:white;border:none;border-radius:8px;padding:10px 17px;font-weight:650}
+button:disabled{opacity:.58;cursor:wait}button:hover:not(:disabled){background:#0e548e}
+dl>div{display:grid;grid-template-columns:190px 1fr;border-bottom:1px solid #edf0f5;padding:9px 0}
+dt{font-weight:700}dd{margin:0;overflow-wrap:anywhere}input{display:block;margin:10px 0;padding:11px;width:220px;max-width:100%;border-radius:8px;border:1px solid #8a9caf}
+.actions{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:14px}ol,ul{padding-left:22px;overflow-wrap:anywhere}
+.note{color:#6b7687;font-size:13px}.status{background:#d9effe;border-left:4px solid #176db2;border-radius:5px;padding:14px 16px;overflow-wrap:anywhere}

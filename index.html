@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DApp Arisan Digital</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <main class="app">
+    <header>
+      <p class="eyebrow">Praktikum Blockchain • Bab 13 • Solidity + MetaMask</p>
+      <h1>Arisan Digital DApp</h1>
+      <p>Frontend untuk kontrak ArisanDigitalFE di Sepolia: daftar, mulai, dan bayar iuran.</p>
+    </header>
+
+    <section class="panel">
+      <h2>1. Koneksi Dompet</h2>
+      <button id="connectBtn">Hubungkan MetaMask</button>
+      <p><strong>Akun:</strong> <span id="account">Belum terhubung</span></p>
+      <p><strong>Jaringan:</strong> <span id="network">-</span></p>
+      <p><strong>Peran saya:</strong> <span id="peran">-</span></p>
+    </section>
+
+    <section class="panel">
+      <h2>2. Status Arisan</h2>
+      <button id="refreshBtn">Muat Ulang Data</button>
+      <dl>
+        <div><dt>Admin</dt><dd id="admin">-</dd></div>
+        <div><dt>Iuran per ronde</dt><dd id="iuran">-</dd></div>
+        <div><dt>Anggota</dt><dd id="anggotaInfo">-</dd></div>
+        <div><dt>Dimulai</dt><dd id="dimulai">-</dd></div>
+        <div><dt>Ronde berjalan</dt><dd id="ronde">-</dd></div>
+        <div><dt>Penerima ronde ini</dt><dd id="penerima">-</dd></div>
+        <div><dt>Sudah bayar ronde ini</dt><dd id="bayarInfo">-</dd></div>
+        <div><dt>Saldo kontrak</dt><dd id="saldo">-</dd></div>
+        <div><dt>Selesai</dt><dd id="selesai">-</dd></div>
+      </dl>
+      <p><strong>Daftar anggota (urutan = urutan penerima):</strong></p>
+      <ol id="daftarAnggota"><li>-</li></ol>
+    </section>
+
+    <section class="panel">
+      <h2>3. Aksi (Transaksi)</h2>
+      <div class="actions">
+        <button id="daftarBtn">Daftar jadi anggota</button>
+        <button id="mulaiBtn">Mulai arisan (admin)</button>
+      </div>
+      <form id="formBayar">
+        <label for="jumlahBayar">Jumlah bayar (ETH). Terisi otomatis sesuai iuran.</label>
+        <input id="jumlahBayar" type="text" inputmode="decimal" placeholder="0.001" />
+        <button id="bayarBtn" type="submit">Bayar iuran</button>
+      </form>
+      <p class="note">Kontrak menolak jumlah yang tidak pas, akun non-anggota, dan pembayaran dobel. Penolakan itu terjadi di kontrak, bukan di frontend.</p>
+    </section>
+
+    <section class="panel">
+      <h2>4. Kejadian dari transaksi terakhir (event)</h2>
+      <ul id="logEvent"><li>Belum ada.</li></ul>
+    </section>
+
+    <p id="status" class="status" role="status" aria-live="polite">Isi alamat kontrak pada config.js sebelum mencoba.</p>
+  </main>
+  <script type="module" src="/main.js"></script>
+</body>
+</html>
